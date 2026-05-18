@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mystyle}[2026/01/12 Robust Margin Theorems]
+
+% ---------------- Packages ----------------
+\RequirePackage[dvipsnames]{xcolor}   % for colors
+\RequirePackage{amsthm}               % theorem environments
+\RequirePackage{marginnote}           % margin notes
+\RequirePackage{titlesec}             % section formatting
+\RequirePackage{etoolbox}             % patching commands
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+
+% ---------------- Margins ----------------
+\reversemarginpar                     % move margin notes to left
+\setlength{\marginparwidth}{3cm}      % ensure enough space
+
+% ---------------- Margin label command ----------------
+\newcommand{\marginlabel}[2]{%
+  \marginnote{\bfseries\color{#1}#2}[2\ht\strutbox]%
+}
+
+
+\makeatletter
+\newenvironment{lmultline}
+  {\setlength{\mathindent}{0pt}\multline}
+  {\endmultline}
+\makeatother
+
+% ---------------- End of mystyle.sty ----------------

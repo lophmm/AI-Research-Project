@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{mystyle}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[
+backend=biber,
+style=alphabetic
+]{biblatex}
+\addbibresource{references.bib}
+
+
+\geometry{outer=2cm}
+
+\title{AI Bubble and Markets Dynamics Research Project}
+\author{Mya Mokrane\\McGill University\\261104994}
+\date{May 18, 2026}
+
+\begin{document}
+\maketitle
+\tableofcontents 
+
+
+\section*{Abstract}
+
+The AI bubble.
+
+\newpage
+
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+  The rapid development of artificial intelligence has had not only drastic impacts on our daily lives and future careers, but also a significant impact on many financial markets and enterprises. Indeed, AI has not only become a tool many of us use and rely on for research, and advice for individuals and governments but also a revolutionary tool in scientific experiements, models, and analysis. 
+  As a result, the investments and the development of such a tool has become a pivotal and global trajectory for the future of many fields. 
+  
+
+\section*{Analysis of Major AI-centered tech companies' stock prices}
+\addcontentsline{toc}{section}{Analysis of Major AI-centered tech companies' stock prices}
+
+
+\section*{Black-Scholes Equation}
+\addcontentsline{toc}{section}{Black-Scholes Equation}
+
+ In 1973, Fisher Black and Myron Scholes published their groundbreaking work option pricing. Indeed, in their article "The Pricing of Options and Corporate Liabilities" \cite{black1973pricing}, they derived the Black-Scholes formula for option pricing:
+ \begin{equation}
+    C^{BS}(t, S; r, \sigma, K, T) := S \Phi(d_1) - K e^{-r(T-t)} \Phi(d_2)
+    \label{Black-Scholes Equation}
+ \end{equation}
+ where $\Phi$ denotes the standard normal distribution (df), $r$ represents the continuously compounded risk -free interest rate, $\sigma$ denotes the volatility of the underlying stock, and where 
+  $$d_1 = \frac{\ln\frac{S}{K} + (r+\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}} \qquad d_2 = d_1 - \sigma \sqrt{T-t}$$
+
+  We will use standard market practices where time is measured in years and $r$ and $\sigma$ are expressed in annualized terms.
+
+  Furthermore, we will set $S_t$ to be the price of the stock at time $t$. Real market insterest rates and volatitilities change constanstly and thus depend on time : $ r_t, \sigma_t$. As a result, we take the vector of risk-factors as a function of time: $\textbf{Z}_t = (\ln S_t, r_t, \sigma_t)'$.
+
+  The risk-factor changes are given by : 
+  \begin{equation}
+    \textbf{X}_{t+1} = (\ln S_{t+1} - \ln S_t, r_{t+1}-r_t, \sigma_{t+1} - \sigma_t)'.
+    \label{BS: Risk-Factor Changes}
+  \end{equation}
+
+
+
+
+\section*{New Methods}
+\addcontentsline{toc}{section}{New Methods}
+
+
+
+
+\printbibliography
+
+\end{document}
