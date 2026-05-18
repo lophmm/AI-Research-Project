@@ -30,21 +30,23 @@ style=alphabetic
 
 The AI bubble.
 
+HELLOOOO
+
 
 \newpage
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 
-  The rapid development of artificial intelligence has had not only drastic impacts on our daily lives and future careers, but also a significant impact on many financial markets and enterprises. Indeed, AI has not only become a tool many of us use and rely on for research, and advice for individuals and governments but also a revolutionary tool in scientific experiements, models, and analysis. 
-  As a result, the investments and the development of such a tool has become a pivotal and global trajectory for the future of many fields.  In response to the extraordi-nary growth in demand for AI services and the associated chiptechnology, AI-focused companies have experienced soaringstock prices, which have raised concerns about the potentialformation of speculative bubbles. 
+  The rapid development of artificial intelligence has had a profound impact not only on daily life and future labor markets, but also on global financial markets and large technological enterprises. Artificial intelligence has evolved beyond a simple computational tool and has become increasingly integrated into research, scientific experimentation, optimization, and large-scale decision-making processes used by both corporations and governments.
 
+  As a result, investment in artificial intelligence technologies and infrastructure has grown dramatically over the past decade. In particular, the extraordinary increase in demand for AI services, cloud computing, and semiconductor technology has led to substantial growth in the market valuations of AI-focused firms. This rapid appreciation in stock prices has raised concerns regarding the possible formation of speculative bubbles within AI-related assets.
   
-  Major technology companies such as NVIDIA, META, or Microsoft have thus had a major increase in their stock prices in the past decade. 
+  Major technology companies such as NVIDIA, Meta Platforms, and Microsoft have experienced exceptional increases in their stock prices during the post-pandemic period, particularly following the emergence of large-scale generative AI systems.
 
-  This can lead to the following question :  how relevant are traditional financial models in predicting AI stock prices ? 
-  The Black-Scholes model, developed in 1973, presented a widely used option pricing formula. 
+This naturally raises the following question: to what extent can traditional financial models remain relevant in describing or predicting the dynamics of AI-related equities during speculative market periods?
 
+Among the most influential classical financial models is the Black--Scholes framework, developed in 1973, which introduced one of the most widely used option pricing formulas in quantitative finance. The model assumes that stock prices follow a geometric Brownian motion with constant volatility and continuous dynamics.
 
   \begin{figure}[H]
     \centering
@@ -53,11 +55,14 @@ The AI bubble.
     \label{fig:meta_price}
   \end{figure}
 
-As shown in Figure~\ref{fig:meta_price}, META experienced substantial volatility during the post-pandemic AI expansion period.
+  As illustrated in Figure~\ref{fig:meta_price}, META experienced substantial volatility during the post-pandemic AI expansion period. Such behavior raises important questions regarding the suitability of traditional diffusion-based models under highly speculative market conditions characterized by volatility clustering, rapid price appreciation, and abrupt market corrections.
 
-\section*{Black-Scholes Equation}
-\addcontentsline{toc}{section}{Black-Scholes Equation}
+  This paper investigates whether classical stochastic models such as Black--Scholes remain informative in the context of AI-related equities, and explores the extent to which more advanced models incorporating stochastic volatility or jump dynamics may better capture the statistical behavior of speculative assets.
 
+\section*{Black-Scholes Model}
+\addcontentsline{toc}{section}{Black-Scholes Model}
+
+\subsection{Black-Scholes Formula for Option Pricing}
  In 1973, Fisher Black and Myron Scholes published their groundbreaking work option pricing. Indeed, in their article "The Pricing of Options and Corporate Liabilities" \cite{black1973pricing}, they derived the Black-Scholes formula for option pricing:
  \begin{equation}
     C^{BS}(t, S; r, \sigma, K, T) := S \Phi(d_1) - K e^{-r(T-t)} \Phi(d_2)
@@ -65,6 +70,8 @@ As shown in Figure~\ref{fig:meta_price}, META experienced substantial volatility
  \end{equation}
  where $\Phi$ denotes the standard normal distribution (df), $r$ represents the continuously compounded risk -free interest rate, $\sigma$ denotes the volatility of the underlying stock, and where 
   $$d_1 = \frac{\ln\frac{S}{K} + (r+\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}} \qquad d_2 = d_1 - \sigma \sqrt{T-t}$$
+
+  Here, $K$ is the premium, while T is the maturity of the option. 
 
   We will use standard market practices where time is measured in years and $r$ and $\sigma$ are expressed in annualized terms.
 
@@ -76,12 +83,13 @@ As shown in Figure~\ref{fig:meta_price}, META experienced substantial volatility
     \label{BS: Risk-Factor Changes}
   \end{equation}
 
+  \subsection{Geometric Brownian Motion for Stock Prices}
 
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../figures/meta_close_price_vs_BS_path.png}
     \caption{META closing stock price vs Black Scholes Simulated path since 2020.}
-    \label{fig:meta_price}
+    \label{fig:meta_BS_price}
   \end{figure}
 
 \section*{New Methods}

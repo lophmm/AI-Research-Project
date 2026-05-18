@@ -1,3 +1,5 @@
 \contentsline {section}{Introduction}{2}{Doc-Start}%
-\contentsline {section}{Black-Scholes Equation}{2}{figure.1}%
-\contentsline {section}{New Methods}{3}{figure.2}%
+\contentsline {section}{Black-Scholes Model}{3}{figure.1}%
+\contentsline {subsection}{\numberline {0.1}Black-Scholes Formula for Option Pricing}{3}{subsection.0.1}%
+\contentsline {subsection}{\numberline {0.2}Geometric Brownian Motion for Stock Prices}{3}{subsection.0.2}%
+\contentsline {section}{New Methods}{4}{figure.2}%
