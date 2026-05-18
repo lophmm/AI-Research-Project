@@ -17,7 +17,7 @@ style=alphabetic
 
 \geometry{outer=2cm}
 
-\title{AI Bubble and Markets Dynamics Research Project}
+\title{How robust are traditional stock price models under bubble-like market dynamics?\\Analysis of the AI bubble}
 \author{Mya Mokrane\\McGill University\\261104994}
 \date{May 18, 2026}
 
@@ -37,7 +37,8 @@ The AI bubble.
 \addcontentsline{toc}{section}{Introduction}
 
   The rapid development of artificial intelligence has had not only drastic impacts on our daily lives and future careers, but also a significant impact on many financial markets and enterprises. Indeed, AI has not only become a tool many of us use and rely on for research, and advice for individuals and governments but also a revolutionary tool in scientific experiements, models, and analysis. 
-  As a result, the investments and the development of such a tool has become a pivotal and global trajectory for the future of many fields. 
+  As a result, the investments and the development of such a tool has become a pivotal and global trajectory for the future of many fields.  In response to the extraordi-nary growth in demand for AI services and the associated chiptechnology, AI-focused companies have experienced soaringstock prices, which have raised concerns about the potentialformation of speculative bubbles. 
+
   
   Major technology companies such as NVIDIA, META, or Microsoft have thus had a major increase in their stock prices in the past decade. 
 
@@ -50,13 +51,9 @@ The AI bubble.
     \includegraphics[width=0.8\textwidth]{../figures/meta_close_price.png}
     \caption{META closing stock price since 2020.}
     \label{fig:meta_price}
-\end{figure}
+  \end{figure}
 
 As shown in Figure~\ref{fig:meta_price}, META experienced substantial volatility during the post-pandemic AI expansion period.
-
-\section*{Analysis of Major AI-centered tech companies' stock prices}
-\addcontentsline{toc}{section}{Analysis of Major AI-centered tech companies' stock prices}
-
 
 \section*{Black-Scholes Equation}
 \addcontentsline{toc}{section}{Black-Scholes Equation}
@@ -80,11 +77,20 @@ As shown in Figure~\ref{fig:meta_price}, META experienced substantial volatility
   \end{equation}
 
 
-
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../figures/meta_close_price_vs_BS_path.png}
+    \caption{META closing stock price vs Black Scholes Simulated path since 2020.}
+    \label{fig:meta_price}
+  \end{figure}
 
 \section*{New Methods}
 \addcontentsline{toc}{section}{New Methods}
 
+\subsection*{Times Series Analysis : GARCH Model}
+
+
+\subsection*{AI Stress-Testing}
 
 
 
