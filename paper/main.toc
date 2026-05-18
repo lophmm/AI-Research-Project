@@ -1,4 +1,4 @@
 \contentsline {section}{Introduction}{2}{Doc-Start}%
-\contentsline {section}{Analysis of Major AI-centered tech companies' stock prices}{2}{Doc-Start}%
-\contentsline {section}{Black-Scholes Equation}{2}{Doc-Start}%
-\contentsline {section}{New Methods}{2}{equation.2}%
+\contentsline {section}{Analysis of Major AI-centered tech companies' stock prices}{2}{figure.1}%
+\contentsline {section}{Black-Scholes Equation}{2}{figure.1}%
+\contentsline {section}{New Methods}{3}{equation.2}%
