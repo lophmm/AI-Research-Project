@@ -30,7 +30,7 @@ style=alphabetic
 
 The AI bubble.
 
-HELLOOOO
+
 
 
 \newpage
@@ -62,7 +62,8 @@ Among the most influential classical financial models is the Black--Scholes fram
 \section*{Black-Scholes Model}
 \addcontentsline{toc}{section}{Black-Scholes Model}
 
-\subsection{Black-Scholes Formula for Option Pricing}
+\subsection*{Black-Scholes Formula for Option Pricing}
+\addcontentsline{toc}{subsection}{Black-Scholes Formula for Option Pricing}
  In 1973, Fisher Black and Myron Scholes published their groundbreaking work option pricing. Indeed, in their article "The Pricing of Options and Corporate Liabilities" \cite{black1973pricing}, they derived the Black-Scholes formula for option pricing:
  \begin{equation}
     C^{BS}(t, S; r, \sigma, K, T) := S \Phi(d_1) - K e^{-r(T-t)} \Phi(d_2)
@@ -83,23 +84,38 @@ Among the most influential classical financial models is the Black--Scholes fram
     \label{BS: Risk-Factor Changes}
   \end{equation}
 
-  \subsection{Geometric Brownian Motion for Stock Prices}
+  \subsection*{Geometric Brownian Motion for Stock Prices}
+  \addcontentsline{toc}{subsection}{Geometric Brownian Motion for Stock Prices}
+    We will use the \cite{shreve2004stochastic} :
+    First consider a portfolio where we invest in a money market account paying a constant rate of interest $r$ and in a stock modeled by the geometric Brownian motion
+    \begin{equation}
+      dS(t)= \alpha S(t) dt + \sigma S(t) dW(t)
+      \label{Portfolio}
+    \end{equation}
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{../figures/meta_close_price_vs_BS_path.png}
-    \caption{META closing stock price vs Black Scholes Simulated path since 2020.}
-    \label{fig:meta_BS_price}
-  \end{figure}
+    Suppose at each time $t$, the investor holds $\Delta(t)$ shares of stock. The remainder of the portfolio value, $\Delta (t)$
+
+  \subsection*{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
+  \addcontentsline{toc}{subsection}{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{../figures/meta_close_price_vs_BS_path.png}
+      \caption{META closing stock price vs Black Scholes Simulated path since 2020.}
+      \label{fig:meta_BS_price}
+    \end{figure}
+
 
 \section*{New Methods}
 \addcontentsline{toc}{section}{New Methods}
 
 \subsection*{Times Series Analysis : GARCH Model}
-
+\addcontentsline{toc}{subsection}{Times Series Analysis : GARCH Model}
 
 \subsection*{AI Stress-Testing}
+\addcontentsline{toc}{subsection}{AI Stress-Testing}
 
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
 
 
 \printbibliography

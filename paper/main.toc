@@ -1,5 +1,9 @@
 \contentsline {section}{Introduction}{2}{Doc-Start}%
 \contentsline {section}{Black-Scholes Model}{3}{figure.1}%
-\contentsline {subsection}{\numberline {0.1}Black-Scholes Formula for Option Pricing}{3}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}Geometric Brownian Motion for Stock Prices}{3}{subsection.0.2}%
+\contentsline {subsection}{Black-Scholes Formula for Option Pricing}{3}{section*.1}%
+\contentsline {subsection}{Geometric Brownian Motion for Stock Prices}{3}{equation.2}%
+\contentsline {subsection}{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}{4}{equation.3}%
 \contentsline {section}{New Methods}{4}{figure.2}%
+\contentsline {subsection}{Times Series Analysis : GARCH Model}{4}{section*.2}%
+\contentsline {subsection}{AI Stress-Testing}{4}{section*.2}%
+\contentsline {section}{Conclusion}{4}{section*.2}%

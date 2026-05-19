@@ -50,11 +50,47 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of political economy}
       \field{number}{3}
-      \field{title}{The pricing of options and corporate liabilities}
+      \field{title}{The Pricing of Options and Corporate Liabilities}
       \field{volume}{81}
       \field{year}{1973}
       \field{pages}{637\bibrangedash 654}
       \range{pages}{18}
+    \endentry
+    \entry{shreve2004stochastic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5febe181cb6182901e182c6fbdcdd80a}{%
+           family={Shreve},
+           familyi={S\bibinitperiod},
+           given={S.E.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{fullhash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{fullhashraw}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{bibnamehash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{authorbibnamehash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{authornamehash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{authorfullhash}{5febe181cb6182901e182c6fbdcdd80a}
+      \strng{authorfullhashraw}{5febe181cb6182901e182c6fbdcdd80a}
+      \field{labelalpha}{Shr04}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780387401010}
+      \field{number}{v. 11}
+      \field{series}{Springer Finance Textbooks}
+      \field{title}{Stochastic Calculus for Finance II: Continuous-Time Models}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://books.google.ca/books?id=O8kD1NwQBsQC
+      \endverb
+      \verb{url}
+      \verb https://books.google.ca/books?id=O8kD1NwQBsQC
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
