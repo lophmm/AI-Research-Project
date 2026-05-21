@@ -70,8 +70,10 @@ Among the most influential classical financial models is the Black--Scholes fram
     \label{Black-Scholes Equation}
  \end{equation}
  where $\Phi$ denotes the standard normal distribution (df), $r$ represents the continuously compounded risk -free interest rate, $\sigma$ denotes the volatility of the underlying stock, and where 
-  $$d_1 = \frac{\ln\frac{S}{K} + (r+\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}} \qquad d_2 = d_1 - \sigma \sqrt{T-t}$$
-
+  \begin{equation}
+  d_1 = \frac{\ln\frac{S}{K} + (r+\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}} \qquad d_2 = d_1 - \sigma \sqrt{T-t}
+    \label{d1, d2}
+  \end{equation}
   Here, $K$ is the premium, while T is the maturity of the option. 
 
   We will use standard market practices where time is measured in years and $r$ and $\sigma$ are expressed in annualized terms.
@@ -93,7 +95,39 @@ Among the most influential classical financial models is the Black--Scholes fram
       \label{Portfolio}
     \end{equation}
 
-    Suppose at each time $t$, the investor holds $\Delta(t)$ shares of stock. The remainder of the portfolio value, $\Delta (t)$
+    Suppose at each time $t$, the investor holds $\Delta(t)$ shares of stock. The remainder of the portfolio value, $X(t) - \Delta (t) S(t) $, is invested in the money market account. 
+    Thus the differential $dX(t)$ for the investor's portfolio value at time $t$ is due to the following 2 factors :  capital gain $\Delta(t) dS(t)$ on the stock position and the
+    interest earnings $r(X(t) - \Delta(t)S(t)) dt$ on the cash position, and thus amounts to : 
+    $$
+      dX(t) = \Delta (t) dS(t) + r(X(t) - \Delta(t)S(t)) dt
+      \\= \Delta (t) (\alpha S(t) dt + \sigma S(t) dW(t)) + r(X(t) - \Delta(t)(\alpha S(t) dt + \sigma S(t) dW(t))) dt
+      \\= rX(t) dt + \Delta (t) (\alpha -r)S(t) dt + \Delta (t) \sigma S(t) dW(t)
+    $$
+    As explained in \cite{shreve2004stochastic}, the three terms can be understood as :
+    \begin{enumerate}
+      \item $rX(t) dt$ an average underlying rate of return r on the portfolio
+      \item $\Delta (t) (\alpha -r)S(t) dt$ a risk premium a - r for investing in the stock
+      \item $\Delta (t) \sigma S(t) dW(t)$ a volatility term proportional to the size of the stock investmen
+    \end{enumerate}
+
+    We seek a continuous function $c(t, x)$ that is a solution to the Black-Scholes-Merton partial diflerential equation 
+    \begin{equation}
+      c_t(t,x)+rxc_x(t,x)+\frac{1}{2}\sigma^2 x^2 c_{xx}(t,x) = r c(t,x), \qquad \forall t \in [0,T), \qquad x\geq 0
+      \label{Black-Scholes-Merton partial diflerential equation}
+    \end{equation}
+
+    And that satisfies the terminal condition 
+    \begin{equation}
+      c(T,x) = (x-K)^+
+      \label{Terminal condition}
+    \end{equation}
+
+    The solution to \ref{Black-Scholes-Merton partial diflerential equation} is the following :
+    \begin{equation}
+      c(t,x)=x\Phi(d_1)-Ke^{-r(T-t)}\Phi(d_2) ,\qquad 0\leq t<T, \qquad x>0
+      \label{solution to BSM}
+    \end{equation}
+    with $d_1,d_2$ as described above \ref{d1, d2}.
 
   \subsection*{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
   \addcontentsline{toc}{subsection}{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
