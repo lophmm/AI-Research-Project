@@ -129,6 +129,21 @@ Among the most influential classical financial models is the Black--Scholes fram
     \end{equation}
     with $d_1,d_2$ as described above \ref{d1, d2}.
 
+    Although the Black--Scholes framework is primarily known for its option pricing formula, it is built on the assumption that the underlying stock price follows a geometric Brownian motion,
+   $$dS(t)=\alpha S(t)dt+\sigma S(t)dW(t).$$ 
+   In the Example 6.2.1 on \cite{shreve2004stochastic}, we derive the solution to this stochastic differential equation and find that when we set initial time zero and initial position to be $S(0)$, namely :
+   $$S(t)=S(0)\exp\left((\alpha-\frac12\sigma^2)t+\sigma W(t)\right)$$. 
+   
+   Similarily, for $T\geq t : S(T)=S(0)\exp\left((\alpha-\frac12\sigma^2)t+\sigma W(t)\right)$
+  
+   However, the Brownian increment property states the following : $W_{t+\Delta t}-W_t \sim \sqrt{\Delta t}Z_t \qquad Z_t \sim N(0,1)$
+
+   Therefore, for simulation over a discrete time step \(\Delta t\), we use
+   
+   $$S_{t+\Delta t}=S_t\exp\left((\alpha-\frac12\sigma^2)\Delta t+\sigma\sqrt{\Delta t}Z_t\right),\quad Z_t\sim N(0,1).$$
+   
+   This is the formula used to generate the simulated Black--Scholes stock price path.
+
   \subsection*{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
   \addcontentsline{toc}{subsection}{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}
     \begin{figure}[H]
