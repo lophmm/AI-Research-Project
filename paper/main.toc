@@ -3,7 +3,7 @@
 \contentsline {subsection}{Black-Scholes Formula for Option Pricing}{3}{section*.1}%
 \contentsline {subsection}{Geometric Brownian Motion for Stock Prices}{3}{equation.3}%
 \contentsline {subsection}{Simulation of META Stock Price using the Geometric Brownian Motion derived from the Black-Scholes Formula}{4}{equation.7}%
-\contentsline {section}{New Methods}{5}{figure.2}%
-\contentsline {subsection}{Times Series Analysis : GARCH Model}{5}{section*.2}%
+\contentsline {section}{New Methods}{4}{figure.2}%
+\contentsline {subsection}{Times Series Analysis : ARMA-GARCH Model}{4}{section*.2}%
 \contentsline {subsection}{AI Stress-Testing}{5}{section*.2}%
 \contentsline {section}{Conclusion}{5}{section*.2}%
